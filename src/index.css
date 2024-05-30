@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+body {
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 0.08vh;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.fs-7 {
+  font-size: 14px;
+}
+.fs-8 {
+  font-size: 12px;
+}
+.fs-9 {
+  font-size: 10px;
+}
+.text-gray {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+.page-content {
+  background-color: black;
+  min-height: 100vh;
+  position: relative;
+  background-size: cover;
+  z-index: 1;
+  padding-left: 130px;
+  padding-right: 80px;
+  padding-top: 30px;
+}
+@media (max-width: 768px) {
+  .page-content {
+    padding-left: 100px;
+  }
+}
+.page-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.h-150p {
+  height: 150px !important;
+}
+.h-300p {
+  max-height: 250px !important;
+}
+
+.list-none {
+  list-style: none !important;
+}
+.opacity-hover {
+  transition: 0.3s;
+}
+.opacity-hover:hover {
+  opacity: 100% !important;
+}
+.sidebarImg {
+  height: 45px;
+  width: 38px;
+}
+
+.left-sidebar {
+  position: fixed;
+  height: 100%;
+  border-right: 1px solid rgba(134, 134, 134, 0.5);
+  left: 0;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.leftmenu {
+  height: calc(100vh - 124px);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  overflow-y: auto;
+  margin-top: 150px;
+}
+
+.leftmenu a.active {
+  opacity: 0.8 !important;
+}
+.leftmenu a.active::before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  background-color: #ee930e;
+  left: 0;
+  top: 0;
+}
+
+.right-sidebar {
+  background-color: red;
+  position: fixed;
+  height: 100%;
+  border-right: 1px solid rgba(134, 134, 134, 0.5);
+  right: -192px;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  width: 274px;
+  transition: 0.3s;
+  background-color: rgba(0, 0, 0, 0);
+  padding-top: 3.5vh;
+  padding-left: 1.5vh;
+}
+.right-sidebar:hover {
+  right: 0;
+  background-color: rgba(16, 16, 16, 0.8);
+}
+.right-sidebar p {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.right-sidebar:hover p {
+  opacity: 1;
+  visibility: visible;
+}
+.rightImg {
+  width: 43px;
+  height: 47px;
+}
+.rightuserblock {
+  border-left: 2px solid;
+  border-color: #fff;
+}
+.userlist li:not(.active) {
+  opacity: 0.5;
+}
+.userlist li {
+  transition: 0.3s;
+}
+.userlist li:hover {
+  opacity: 1;
+}
+.userlist li:hover .userdetails {
+  background-color: white;
+}
+.userlist li:hover .userdetails p {
+  color: black !important;
+}
+.userlist li.active .rightuserblock {
+  border-color: #23c13a;
+}
+.usertype {
+  border-top: 1px solid;
+  border-color: transparent;
+  transition: 0.3s;
+}
+
+.right-sidebar:hover .usertype {
+  border-color: #ffffff27;
+}
+.border-top-muted {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.multiplaylist {
+  height: calc(100vh - 158px);
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.multiplaylist li:hover .titleBlock {
+  background-color: white;
+}
+.multiplaylist li:hover h4 {
+  color: black;
+}
+.transition {
+  transition: 0.1s;
+}
+.multiplaylist li.active h4 {
+  color: rgb(255, 138, 0);
+}
